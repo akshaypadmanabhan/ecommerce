@@ -57,17 +57,17 @@
     margin-left: 16cm;
     position:fixed;
     right: 250px;
-    top: 16px;
+    top: 10px;
 }
 .search-input{
     width: 7cm;
-    height: .8cm;
+    height: .95cm;
     border-radius: 7px;
     border-style: none;
 }
 .search-button{
     width: 2.2cm;
-    height: .8cm;
+    height: .95cm;
     background-color: rgb(58, 132, 132);
     border-radius: 7px;
     border-style: none;
