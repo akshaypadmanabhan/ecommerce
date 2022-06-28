@@ -1,6 +1,7 @@
 .navbar-parent{
     position: fixed;
     height: 60px;
+    display: inline-block;
     
     display:flex;
     background-color:#ebb40ff3;
@@ -11,22 +12,36 @@
 }
 .navbar{
     display: flex;
+    margin-left: 1cm;
 }
+.navbar-brand{
+    position: fixed;
+
+}
+.navbar-full{
+    margin-right: 5cm;
+}
+
 .nav-items{
-    table-layout: fixed;
+
+    
     list-style: none;
     
     display: inline;
 
     
 }
+
 .nav-list li {
     list-style: none;
     
     display: flex;}
     
-.nav-list{
-    
+.navbar-list{
+    position: fixed;
+    top: 5.5px;
+    left: 7cm;
+    font-size: large;
     
     text-decoration: none;
     color:black;  
@@ -39,5 +54,39 @@
     
 }
 .search{
-    display: flex;
+    margin-left: 16cm;
+    position:fixed;
+    right: 250px;
+    top: 16px;
+}
+.search-input{
+    width: 7cm;
+    height: .8cm;
+    border-radius: 7px;
+    border-style: none;
+}
+.search-button{
+    width: 2.2cm;
+    height: .8cm;
+    background-color: rgb(58, 132, 132);
+    border-radius: 7px;
+    border-style: none;
+    
+}
+.login-link{
+    text-decoration: none;
+    text-align: end;
+    color: blue;
+    font-size:x-large;
+    position:fixed;
+    right: 100px;
+    top: 16px;
+    cursor: pointer;
+
+    
+}
+.last-logo{
+    position: fixed;
+    right: 0%;
+    height: 60px;
 }

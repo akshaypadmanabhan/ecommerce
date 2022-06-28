@@ -4,12 +4,12 @@ import "./NavBar.css"
 function NavBar() {
     return (
         <div className='navbar-parent'>
-            <img alt="logo"className='logo'src='https://play-lh.googleusercontent.com/DXF7_kJPaP05Q14BbG4xmsiu4eRbEOnRpJma-qGMMu3NVImdMwzmRnNXogCuRu5YZw' />
+            <img alt="logo" className="logo"src='https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg'/>
             <nav className="navbar">
                 <h2 className="navbar-brand">Shopriix</h2>
 
                 <div className="navbar-full" >
-                    <ul class="navbar-list ">
+                    <ul className="navbar-list ">
                         <li className="nav-items">
                             <a className="nav-link" href="#">Home </a></li>
                         <li className="nav-items">
@@ -18,10 +18,8 @@ function NavBar() {
                             <a className="nav-link" href="#">Action</a></li>
                         <li className="nav-items">
                             <a className="nav-link" href="#">Another action</a></li>
-                        <li className="nav-items">
-                            <a className="nav-link" href="#">Something else here</a></li>
-                        <li className="nav-items">
-                            <a className="nav-link" href="#">Disabled</a></li>
+                        
+                        
 
 
                     </ul>
@@ -31,6 +29,10 @@ function NavBar() {
                     </form>
                 </div>
             </nav>
+               <div className='login-text'>
+                <a className='login-link'>Login</a>
+               </div>
+               <img className="last-logo"src='https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg'/>
 
         </div>
     )
