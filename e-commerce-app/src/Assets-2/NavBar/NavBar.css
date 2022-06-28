@@ -1,0 +1,43 @@
+.navbar-parent{
+    position: fixed;
+    height: 60px;
+    
+    display:flex;
+    background-color:#ebb40ff3;
+    top: 0%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+}
+.navbar{
+    display: flex;
+}
+.nav-items{
+    table-layout: fixed;
+    list-style: none;
+    
+    display: inline;
+
+    
+}
+.nav-list li {
+    list-style: none;
+    
+    display: flex;}
+    
+.nav-list{
+    
+    
+    text-decoration: none;
+    color:black;  
+    
+}
+.nav-link{
+    text-decoration: none;
+    color:black;
+    margin:10px;
+    
+}
+.search{
+    display: flex;
+}
