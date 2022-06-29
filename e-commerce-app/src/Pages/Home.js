@@ -3,13 +3,13 @@ import Banner from '../Components/Banner/Banner'
 import Footer from '../Components/Footer/Footer'
 import Header from '../Components/Header/Header'
 import Posts from '../Components/Posts/Posts'
-import SignUpPage from './SignUpPage'
 
-function Home() {
+
+function Home(props) {
   return (
     <div>
    <Header/>
-   {/* <SignUpPage/> */}
+  
     <Banner />
    <Posts/>
    <Footer />
