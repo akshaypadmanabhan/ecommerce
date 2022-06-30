@@ -1,20 +1,28 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route } from "react-router-dom"
 import Home from './Pages/Home';
 import SignUpPage from './Pages/SignUpPage';
+import LoginPage from './Pages/LoginPage';
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-        <Route element={<Home/>} path="/" />
-        <Route element={<SignUpPage/>} path="/signup" />
+        
+        <Route  exact path="/">
+        <Home/>
+        </Route>
+        <Route  path="/signup">
+        <SignUpPage />
+        </Route>
+        <Route  path="/login">
+        <LoginPage/>
+        </Route>
 
 
-        </Routes>
+        
 
 
       </BrowserRouter>

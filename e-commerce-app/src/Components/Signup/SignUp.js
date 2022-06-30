@@ -1,16 +1,43 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import FirebaseContext from '../../store/FirebaseContext'
+import {useHistory} from "react-router-dom"
 import "./SignUp.css"
 
+
+
+
+
+
+
 function SignUp() {
+  
+  
+  
+  
+    const history=useHistory()
     const [firstname,setFirstname]=useState('')
     const [lastname,setLastname]=useState('')
     const [email,setEmail]=useState('')
     const [mobile,setMobile]=useState('')
     const [password,setPassword]=useState('')
+    const {firebase} =useContext(FirebaseContext)
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(firstname)
+        firebase.auth().createUserWithEmailAndPassword(email,password).then((result)=>{
+            result.user.updateProfile({displayName:firstname}).then(()=>{
+             firebase.firestore().collection('user').doc("one").set({
+                id:result.user.uid,
+                username:firstname,
+                firstname:firstname,
+                lastname:lastname,
+                phone:mobile
+              })
+              .then(()=>{
+                history.push("/login")
+              })
+            })
+        })
     }
   return (
 <div>
@@ -29,7 +56,7 @@ function SignUp() {
            type="email" id="email" placeholder="example@gmail.com" name='email'/>
            <br/>
            <br/>
-           <input className='input' alue={mobile} onChange={(e)=>setMobile(e.target.value)}
+           <input className='input' value={mobile} onChange={(e)=>setMobile(e.target.value)}
            type="number" id="mobile" placeholder="1234567" name='mobile'/>
            <br/>
            <br/>
@@ -41,7 +68,7 @@ function SignUp() {
            <button className='signup-button' type='submit'>SignUp</button>
 
         </form>
-        <a className='login-from-signup' href=''>Login</a>
+        <a className='login-from-signup' href='/login'>Login</a>
 
 
 

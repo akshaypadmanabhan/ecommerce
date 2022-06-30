@@ -4,11 +4,13 @@ import './Login.css';
 
 function Login() {
   return (
-    <div>
+    <div className='backdrop'>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img className='login-logo' src="https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg"></img>
+        <br />
         <form>
           <label htmlFor="fname">Email</label>
+          <br />
           <br />
           <input
             className="input"
@@ -18,7 +20,9 @@ function Login() {
             defaultValue="John"
           />
           <br />
+          <br />
           <label htmlFor="lname">Password</label>
+          <br />
           <br />
           <input
             className="input"

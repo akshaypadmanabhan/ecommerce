@@ -1,18 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import createRoot from 'react-dom';
 import App from './App';
+import firebase from "./Firebase/Config"
 import FirebaseContext from './store/FirebaseContext';
-import firebase from "./firebase/config"
 
+createRoot.render(
 
+<FirebaseContext.Provider value={{firebase}}>
+<App /> 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <FirebaseContext.Provider>
-    <App />
-    </FirebaseContext.Provider>
-    
-  </React.StrictMode>
-);
+</FirebaseContext.Provider>
 
+, document.getElementById('root'));

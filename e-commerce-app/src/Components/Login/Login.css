@@ -1,23 +1,47 @@
+.backdrop{
+  background-image:"https://img.freepik.com/free-photo/cropped-image-woman-inputting-card-information-key-phone-laptop-while-shopping-online_1423-71.jpg?w=826&t=st=1656621488~exp=1656622088~hmac=20b606aa44f99a98b9f5cec152f32ce8c6c1dc2ab13c18c36b5a7dfa089f9156" ;
+}
 .loginParentDiv {
-    border: 1px solid black;
+    /* border: 1px solid black;
     width: max-content;
     padding: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 6px; */
+    border: 1px solid black;
+    background-color:#ebb40ff3 ;
+    
+    
+    padding: 10px;
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 6px;
+    width: 30%;
+  }
+  .login-logo{
+    width:100%;
+    max-height: 5cm;
   }
   
   .loginParentDiv .input {
-    border-top-color: transparent;
+    /* border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
-    outline-color: transparent;
+    outline-color: transparent; */
+    padding-left: 1cm;
+    
+    height: .8cm;
+    width: 70%;
+    border-radius: .2cm;
+    border-style: none;
   }
   
   .loginParentDiv button {
-    width: 100%;
+    width: 80%;
     height: 48px;
     /* border-color: transparent; */
     background-color: #002f34;
