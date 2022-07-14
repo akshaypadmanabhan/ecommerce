@@ -11,13 +11,13 @@ function NavBar() {
                 <div className="navbar-full" >
                     <ul className="navbar-list ">
                         <li className="nav-items">
-                            <a className="nav-link" href="#">Home </a></li>
+                            <a className="nav-link" href="https://www.google.co.in/">Home </a></li>
                         <li className="nav-items">
-                            <a className="nav-link" href="#">Link</a></li>
+                            <a className="nav-link" href="https://www.google.co.in/">Link</a></li>
                         <li className="nav-items">
-                            <a className="nav-link" href="#">Action</a></li>
+                            <a className="nav-link" href="https://www.google.co.in/">Action</a></li>
                         <li className="nav-items">
-                            <a className="nav-link" href="#">Another action</a></li>
+                            <a className="nav-link" href="https://www.google.co.in/">Another action</a></li>
                         
                         
 
@@ -30,9 +30,9 @@ function NavBar() {
                 </div>
             </nav>
                <div className='login-text'>
-                <a className='login-link'>Login</a>
+                <a className='login-link'href='/login'>Login</a>
                </div>
-               <img className="last-logo"src='https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg'/>
+               <img alt="lastlogo"className="last-logo"src='https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg'/>
 
         </div>
     )
