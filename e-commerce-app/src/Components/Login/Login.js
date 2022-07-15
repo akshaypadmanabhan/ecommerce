@@ -6,17 +6,17 @@ import FirebaseContext from '../../store/FirebaseContext';
 import './Login.css';
 
 function Login() {
-  const history=useHistory
+  const history=useHistory()
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const {firebase}=useContext(FirebaseContext)
   const handleLogin= (e)=>{
-    e.Preventdefault()
+    e.preventDefault()
     firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
       alert("LOGGED IN")
       history.push("/")
     })
-    .cath((error)=>{
+    .catch((error)=>{
       alert(error.message)
     })
   }
