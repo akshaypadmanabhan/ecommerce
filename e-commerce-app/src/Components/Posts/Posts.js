@@ -1,46 +1,66 @@
 
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-import Heart from '../../Assets-2/Heart';
+import FirebaseContext from '../../store/FirebaseContext';
 import './Posts.css';
 
 function Posts() {
+  const {firebase} =useContext(FirebaseContext)
+  const [products,setProducts]=useState([])
+  useEffect (()=>{
+    firebase.firestore().collection("products").get().then((snapshot)=>{
+      const allPost=snapshot.docs.map((product)=>{
+        return{
+
+          ...product.data(),
+          id:product.id
+        }
+          
+        
+      })
+      setProducts(allPost);
+    })
+
+  },[])
 
   return (
     <div className="postParentDiv">
       <div className="moreView">
         <div className="heading">
-          <span>Quick Menu</span>
-          <span>View more</span>
+          <span>Mobiles</span>
+         
         </div>
         <div className="cards">
-          <div
+          
+          {
+            products.map(product=>{
+             return <div
             className="card">
             <div className="favorite">
-              <Heart></Heart>
+             
             </div>
             <div className="image">
-              <img src="../../../Images/R15V3.jpg" alt="contents" />
+              <img src={product.url} alt="contents" />
             </div>
             <div className="content">
-              <p className="rate">&#x20B9; 250000</p>
-              <span className="kilometer">Two Wheeler</span>
-              <p className="name"> YAMAHA R15V3</p>
+              <p className="rate">{product.price}</p>
+              <span className="category">{product.category}</span>
+              <p className="name">{product.name}</p>
             </div>
-            <div className="date">
-              <span>Tue May 04 2021</span>
-            </div>
+            
           </div>
+
+            })}
         </div>
       </div>
       <div className="recommendations">
         <div className="heading">
-          <span>Fresh recommendations</span>
+          <span>Laptops And Computers</span>
         </div>
         <div className="cards">
           <div className="card">
             <div className="favorite">
-              <Heart></Heart>
+              
             </div>
             <div className="image">
               <img src="../../../Images/R15V3.jpg" alt="" />
@@ -50,9 +70,7 @@ function Posts() {
               <span className="kilometer">Two Wheeler</span>
               <p className="name"> YAMAHA R15V3</p>
             </div>
-            <div className="date">
-              <span>10/5/2021</span>
-            </div>
+            
           </div>
         </div>
       </div>

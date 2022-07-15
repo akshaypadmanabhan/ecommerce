@@ -76,12 +76,13 @@
 .login-link{
     text-decoration: none;
     text-align: end;
-    color: blue;
-    font-size:x-large;
+    color:black;
+    font-size:large;
     position:fixed;
     right: 100px;
-    top: 16px;
+    top: 28px;
     cursor: pointer;
+    text-decoration: underline;
 
     
 }
@@ -89,4 +90,12 @@
     position: fixed;
     right: 0%;
     height: 60px;
+}
+.logout{
+    text-align: end;
+    position:fixed;
+    right: 100px;
+    color:black;
+    cursor: pointer;
+
 }

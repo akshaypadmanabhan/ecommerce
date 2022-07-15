@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom';
+import { AuthContext } from '../../store/Contexts'
+import FirebaseContext from '../../store/FirebaseContext';
 import "./NavBar.css"
 
 function NavBar() {
+    const {user}=useContext(AuthContext);
+    const{firebase}=useContext(FirebaseContext);
+    const history=useHistory()
     return (
         <div className='navbar-parent'>
             <img alt="logo" className="logo"src='https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg'/>
@@ -30,7 +36,13 @@ function NavBar() {
                 </div>
             </nav>
                <div className='login-text'>
-                <a className='login-link'href='/login'>Login</a>
+                <span className='login-link' onClick={()=>{
+                    history.push("/")
+                }}>{user ? `Welcome    ${user.displayName}`:'Login'}</span>
+               {user && <span className='logout' onClick={()=>{
+                firebase.auth().signOut();
+                history.push('/login')
+               }}>Logout</span>} 
                </div>
                <img alt="lastlogo"className="last-logo"src='https://t4.ftcdn.net/jpg/03/77/48/55/360_F_377485593_QHN6cjoNsNdOBoJNOwVRlFcHyZ0M9n3P.jpg'/>
 

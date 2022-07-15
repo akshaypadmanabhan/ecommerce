@@ -26,7 +26,7 @@ function SignUp() {
         e.preventDefault()
         firebase.auth().createUserWithEmailAndPassword(email,password).then((result)=>{
             result.user.updateProfile({displayName:firstname}).then(()=>{
-             firebase.firestore().collection('user').doc("one").set({
+             firebase.firestore().collection('users').add({
                 id:result.user.uid,
                 username:firstname,
                 firstname:firstname,
