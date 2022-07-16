@@ -59,16 +59,14 @@ function Posts() {
         </div>
         <div className="cards">
           <div className="card">
-            <div className="favorite">
-              
-            </div>
+            
             <div className="image">
               <img src="../../../Images/R15V3.jpg" alt="" />
             </div>
             <div className="content">
-              <p className="rate">&#x20B9; 250000</p>
-              <span className="kilometer">Two Wheeler</span>
-              <p className="name"> YAMAHA R15V3</p>
+              <p className="rate"> 250000</p>
+              <span className="category">Laptop</span>
+              <p className="name">MAcBook Air</p>
             </div>
             
           </div>

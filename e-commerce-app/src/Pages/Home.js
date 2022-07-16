@@ -11,6 +11,12 @@ function Home(props) {
    <Header/>
   
     <Banner />
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+   
+   
    <Posts/>
    <Footer />
     
